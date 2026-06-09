@@ -1,0 +1,22 @@
+{
+  "name": "agentpkg-cli",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Manage GitHub Copilot agent packages and compile them into .github outputs.",
+  "type": "module",
+  "bin": {
+    "agentpkg": "./bin/agentpkg.mjs"
+  },
+  "scripts": {
+    "test": "node --test tests/contracts/*.test.mjs tests/e2e/*.test.mjs",
+    "test:agentpkg": "node --test tests/contracts/agentpkg-cli.test.mjs",
+    "test:e2e": "node --test tests/e2e/*.test.mjs",
+    "validate": "node bin/agentpkg.mjs validate-all",
+    "pack:source": "node scripts/pack-source.mjs",
+    "restore:source": "node scripts/restore-project.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}
